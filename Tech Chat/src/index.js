@@ -1,0 +1,15 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./components/App";
+import { AuthContextProvider } from "./context/AuthContext";
+import { ChatContextProvider } from "./context/ChatContext";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <AuthContextProvider>
+    <ChatContextProvider>
+      <App />
+    </ChatContextProvider>
+  </AuthContextProvider>
+);
